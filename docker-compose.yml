@@ -1,0 +1,17 @@
+services:
+  seco-harvester:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DeepSeek__BaseUrl: "http://host.docker.internal:11434"
+      DeepSeek__Model: "deepseek-r1"
+      DeepSeek__Enabled: "true"
+      Processing__BatchSize: "20"
+      Processing__MaxConcurrency: "5"
+    volumes:
+      - seco-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  seco-data:

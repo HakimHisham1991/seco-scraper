@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SecoItemHarvester.Tests/SecoItemHarvester.Tests.csproj" />
+  <Project Path="SecoItemHarvester.Web/SecoItemHarvester.Web.csproj" />
+</Solution>
